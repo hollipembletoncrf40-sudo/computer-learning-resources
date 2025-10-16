@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机学习优质英文资源导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .section-title i {
+            font-size: 1.2em;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title i {
+            color: #667eea;
+            font-size: 0.9em;
+        }
+
+        .card-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: #f0f0f0;
+            color: #555;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95em;
+        }
+
+        footer i {
+            color: #667eea;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-left: 5px solid #667eea;
+        }
+
+        .intro-box p {
+            color: #4c51bf;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> 计算机学习优质英文资源导航</h1>
+            <p>精选全球顶尖的计算机学习资源，助力你的编程之旅 🚀</p>
+        </header>
+
+        <div class="content">
+            <div class="intro-box">
+                <p><i class="fas fa-info-circle"></i> <strong>关于本指南：</strong>本页面汇集了计算机科学领域最优质的英文学习资源，涵盖自学指南、在线课程、实战平台和经典教材。无论你是编程初学者还是进阶开发者，都能在这里找到适合自己的学习路径。</p>
+            </div>
+
+            <!-- 自学指南 -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-map-marked-alt"></i>
+                    自学指南 Self-Learning Guides
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-book-open"></i>
+                            CS自学指南
+                        </div>
+                        <div class="card-description">
+                            由北京大学学生编写的计算机科学自学指南，系统介绍了CS各个方向的学习路线和优质资源。内容涵盖编程入门、数据结构、算法、操作系统、计算机网络等核心课程。
+                        </div>
+                        <a href="https://csdiy.wiki/" target="_blank" class="card-link">csdiy.wiki</a>
+                        <div class="card-tag">💡 适合：零基础 & 系统学习者</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-route"></i>
+                            Teach Yourself CS
+                        </div>
+                        <div class="card-description">
+                            为自学成才的工程师提供的完整CS课程规划。精选9门核心课程，涵盖编程、计算机架构、算法、数学、操作系统、网络、数据库、编程语言和分布式系统。
+                        </div>
+                        <a href="https://teachyourselfcs.com/" target="_blank" class="card-link">teachyourselfcs.com</a>
+                        <div class="card-tag">🎯 适合：自学者 & 工程师转型</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-road"></i>
+                            Developer Roadmaps
+                        </div>
+                        <div class="card-description">
+                            可视化技术学习路线图，涵盖前端、后端、DevOps、全栈等多个开发方向。清晰展示学习顺序和技能树，帮助开发者规划职业发展路径。
+                        </div>
+                        <a href="https://roadmap.sh/" target="_blank" class="card-link">roadmap.sh</a>
+                        <div class="card-tag">🗺️ 适合：职业规划 & 技术选型</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-cubes"></i>
+                            The Missing Semester
+                        </div>
+                        <div class="card-description">
+                            MIT开设的课程，教授在传统CS课程中缺失的实用工具和技能，包括Shell、版本控制Git、文本编辑器Vim、调试工具等开发必备技能。
+                        </div>
+                        <a href="https://missing.csail.mit.edu/" target="_blank" class="card-link">missing.csail.mit.edu</a>
+                        <div class="card-tag">🔧 适合：开发工具学习</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 在线课程平台 -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-video"></i>
+                    在线课程平台 Online Course Platforms
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-university"></i>
+                            MIT OpenCourseWare
+                        </div>
+                        <div class="card-description">
+                            麻省理工学院的开放课程项目，免费提供MIT课程的完整材料，包括讲义、作业、考试和视频。计算机课程质量极高，如6.006算法导论、6.824分布式系统等。
+                        </div>
+                        <a href="https://ocw.mit.edu/" target="_blank" class="card-link">ocw.mit.edu</a>
+                        <div class="badge-container">
+                            <span class="badge">免费</span>
+                            <span class="badge">名校课程</span>
+                            <span class="badge">完整材料</span>
+                        </div>
+                        <div class="card-tag">🏆 适合：追求顶尖教育质量</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-certificate"></i>
+                            Coursera
+                        </div>
+                        <div class="card-description">
+                            与全球顶尖大学合作的在线学习平台，提供Stanford、Princeton等名校的CS课程。课程包含视频、作业和项目，完成后可获得证书。热门课程如Machine Learning、Algorithms等。
+                        </div>
+                        <a href="https://www.coursera.org/" target="_blank" class="card-link">coursera.org</a>
+                        <div class="badge-container">
+                            <span class="badge">付费证书</span>
+                            <span class="badge">互动学习</span>
+                            <span class="badge">项目实践</span>
+                        </div>
+                        <div class="card-tag">📜 适合：需要证书认证</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            edX
+                        </div>
+                        <div class="card-description">
+                            由MIT和Harvard创立的在线教育平台，提供Harvard CS50、Berkeley数据结构等经典课程。课程质量高，互动性强，支持认证证书和微学位项目。
+                        </div>
+                        <a href="https://www.edx.org/" target="_blank" class="card-link">edx.org</a>
+                        <div class="badge-container">
+                            <span class="badge">免费旁听</span>
+                            <span class="badge">微学位</span>
+                            <span class="badge">名校合作</span>
+                        </div>
+                        <div class="card-tag">🎓 适合：系统学习专业方向</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-calculator"></i>
+                            Khan Academy
+                        </div>
+                        <div class="card-description">
+                            非营利教育组织提供的免费学习平台，特别适合编程入门和计算机科学基础学习。涵盖JavaScript、HTML/CSS、SQL等入门课程，以及算法和密码学等进阶内容。
+                        </div>
+                        <a href="https://www.khanacademy.org/" target="_blank" class="card-link">khanacademy.org</a>
+                        <div class="badge-container">
+                            <span class="badge">完全免费</span>
+                            <span class="badge">互动练习</span>
+                            <span class="badge">零基础友好</span>
+                        </div>
+                        <div class="card-tag">🌟 适合：编程零基础入门</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-code"></i>
+                            Udacity
+                        </div>
+                        <div class="card-description">
+                            专注于技术和职业技能的在线教育平台，提供纳米学位(Nanodegree)项目。课程由Google、Amazon等科技公司合作设计，注重实战项目和就业导向。
+                        </div>
+                        <a href="https://www.udacity.com/" target="_blank" class="card-link">udacity.com</a>
+                        <div class="badge-container">
+                            <span class="badge">付费</span>
+                            <span class="badge">项目驱动</span>
+                            <span class="badge">就业导向</span>
+                        </div>
+                        <div class="card-tag">💼 适合：职业技能提升</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-laptop-code"></i>
+                            freeCodeCamp
+                        </div>
+                        <div class="card-description">
+                            完全免费的编程学习社区，提供全栈Web开发、数据科学、机器学习等课程。通过实战项目学习，完成课程可获得免费证书。社区活跃，适合自学。
+                        </div>
+                        <a href="https://www.freecodecamp.org/" target="_blank" class="card-link">freecodecamp.org</a>
+                        <div class="badge-container">
+                            <span class="badge">完全免费</span>
+                            <span class="badge">项目实战</span>
+                            <span class="badge">社区支持</span>
+                        </div>
+                        <div class="card-tag">🆓 适合：Web开发学习</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实践训练平台 -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-dumbbell"></i>
+                    实践训练平台 Hands-on Practice Platforms
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-code-branch"></i>
+                            LeetCode
+                        </div>
+                        <div class="card-description">
+                            最受欢迎的算法刷题平台，拥有超过2000道编程题目。涵盖数组、链表、树、图、动态规划等各类算法。支持多种编程语言，提供讨论区和题解，是准备技术面试的必备平台。
+                        </div>
+                        <a href="https://leetcode.com/" target="_blank" class="card-link">leetcode.com</a>
+                        <div class="badge-container">
+                            <span class="badge">免费+付费</span>
+                            <span class="badge">算法训练</span>
+                            <span class="badge">面试准备</span>
+                        </div>
+                        <div class="card-tag">💻 适合：算法学习 & 面试刷题</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-trophy"></i>
+                            HackerRank
+                        </div>
+                        <div class="card-description">
+                            综合性编程练习平台，涵盖算法、数据结构、数学、AI、数据库、Shell等多个领域。提供技能认证和竞赛，企业可通过平台招聘。适合全面提升编程能力。
+                        </div>
+                        <a href="https://www.hackerrank.com/" target="_blank" class="card-link">hackerrank.com</a>
+                        <div class="badge-container">
+                            <span class="badge">免费</span>
+                            <span class="badge">多领域</span>
+                            <span class="badge">技能认证</span>
+                        </div>
+                        <div class="card-tag">🏅 适合：综合技能训练</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-user-ninja"></i>
+                            Codewars
+                        </div>
+                        <div class="card-description">
+                            游戏化编程练习平台，通过解决"kata"（形）来提升编程技能。支持50+编程语言，题目由社区创建和评审，难度从入门到专家。晋级系统激励学习者持续进步。
+                        </div>
+                        <a href="https://www.codewars.com/" target="_blank" class="card-link">codewars.com</a>
+                        <div class="badge-container">
+                            <span class="badge">免费</span>
+                            <span class="badge">游戏化</span>
+                            <span class="badge">社区驱动</span>
+                        </div>
+                        <div class="card-tag">🎮 适合：趣味化学习</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-terminal"></i>
+                            Exercism
+                        </div>
+                        <div class="card-description">
+                            免费开源的编程练习平台，提供60+编程语言的练习track。最大特色是真人导师的代码审查反馈，帮助学习者写出更优雅的代码。强调深度学习而非题海战术。
+                        </div>
+                        <a href="https://exercism.org/" target="_blank" class="card-link">exercism.org</a>
+                        <div class="badge-container">
+                            <span class="badge">完全免费</span>
+                            <span class="badge">导师指导</span>
+                            <span class="badge">代码审查</span>
+                        </div>
+                        <div class="card-tag">👨‍🏫 适合：代码质量提升</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-chess"></i>
+                            Project Euler
+                        </div>
+                        <div class="card-description">
+                            数学与编程结合的挑战平台，包含800+需要数学思维和编程技巧的问题。题目从简单到极难，适合喜欢数学和算法的学习者。不限编程语言，注重解题思路。
+                        </div>
+                        <a href="https://projecteuler.net/" target="_blank" class="card-link">projecteuler.net</a>
+                        <div class="badge-container">
+                            <span class="badge">免费</span>
+                            <span class="badge">数学+编程</span>
+                            <span class="badge">思维训练</span>
+                        </div>
+                        <div class="card-tag">🧮 适合：数学爱好者</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-shield-alt"></i>
+                            HackTheBox
+                        </div>
+                        <div class="card-description">
+                            网络安全训练平台，提供真实的渗透测试环境和CTF挑战。通过攻防实战学习漏洞利用、逆向工程、密码学等安全技能。适合网络安全方向的学习者。
+                        </div>
+                        <a href="https://www.hackthebox.com/" target="_blank" class="card-link">hackthebox.com</a>
+                        <div class="badge-container">
+                            <span class="badge">免费+付费</span>
+                            <span class="badge">安全渗透</span>
+                            <span class="badge">实战环境</span>
+                        </div>
+                        <div class="card-tag">🔐 适合：网络安全学习</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 经典教材推荐 -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-book"></i>
+                    经典教材推荐 Classic Textbooks & References
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-star"></i>
+                            SICP
+                        </div>
+                        <div class="card-description">
+                            <strong>Structure and Interpretation of Computer Programs</strong> - MIT经典计算机教材，被誉为"程序员的圣经"。通过Scheme语言深入讲解程序设计的本质，培养抽象思维和系统构建能力。
+                        </div>
+                        <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html" target="_blank" class="card-link">在线免费阅读</a>
+                        <div class="badge-container">
+                            <span class="badge">编程思想</span>
+                            <span class="badge">函数式编程</span>
+                            <span class="badge">进阶</span>
+                        </div>
+                        <div class="card-tag">🌟 适合：理解编程本质</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-microchip"></i>
+                            CSAPP
+                        </div>
+                        <div class="card-description">
+                            <strong>Computer Systems: A Programmer's Perspective</strong> - 深入理解计算机系统的经典教材。从程序员视角讲解计算机系统，涵盖数据表示、汇编、内存管理、链接、并发等核心知识。
+                        </div>
+                        <a href="http://csapp.cs.cmu.edu/" target="_blank" class="card-link">官方网站</a>
+                        <div class="badge-container">
+                            <span class="badge">系统编程</span>
+                            <span class="badge">底层原理</span>
+                            <span class="badge">中高级</span>
+                        </div>
+                        <div class="card-tag">⚙️ 适合：系统级理解</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-project-diagram"></i>
+                            算法导论 (CLRS)
+                        </div>
+                        <div class="card-description">
+                            <strong>Introduction to Algorithms</strong> - 算法领域的权威教材，全面系统地介绍算法设计与分析。涵盖排序、数据结构、图算法、动态规划、贪心算法、NP完全性等核心内容。
+                        </div>
+                        <a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition" target="_blank" class="card-link">MIT Press</a>
+                        <div class="badge-container">
+                            <span class="badge">算法分析</span>
+                            <span class="badge">数学严谨</span>
+                            <span class="badge">研究生级</span>
+                        </div>
+                        <div class="card-tag">📐 适合：算法深入学习</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-brain"></i>
+                            算法（第4版）
+                        </div>
+                        <div class="card-description">
+                            <strong>Algorithms (4th Edition) by Sedgewick</strong> - 更易读的算法教材，使用Java实现。配有丰富的可视化和实例，适合自学。涵盖基础数据结构、排序、搜索、图和字符串算法。
+                        </div>
+                        <a href="https://algs4.cs.princeton.edu/" target="_blank" class="card-link">配套网站和代码</a>
+                        <div class="badge-container">
+                            <span class="badge">实践导向</span>
+                            <span class="badge">可视化</span>
+                            <span class="badge">中级</span>
+                        </div>
+                        <div class="card-tag">📊 适合：算法实践</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-server"></i>
+                            Operating Systems: Three Easy Pieces
+                        </div>
+                        <div class="card-description">
+                            免费的操作系统教材，讲解虚拟化、并发和持久化三大主题。内容深入浅出，配有大量示例代码和练习题。是学习OS原理的优秀入门教材。
+                        </div>
+                        <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" class="card-link">免费在线阅读</a>
+                        <div class="badge-container">
+                            <span class="badge">操作系统</span>
+                            <span class="badge">免费</span>
+                            <span class="badge">实践项目</span>
+                        </div>
+                        <div class="card-tag">🖥️ 适合：OS入门与进阶</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-network-wired"></i>
+                            Computer Networking: A Top-Down Approach
+                        </div>
+                        <div class="card-description">
+                            自顶向下方法讲解计算机网络的经典教材。从应用层开始逐层深入，介绍HTTP、DNS、TCP、IP、路由等核心协议。配有Wireshark实验，理论与实践结合。
+                        </div>
+                        <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" target="_blank" class="card-link">配套资源</a>
+                        <div class="badge-container">
+                            <span class="badge">计算机网络</span>
+                            <span class="badge">协议分析</span>
+                            <span class="badge">实验配套</span>
+                        </div>
+                        <div class="card-tag">🌐 适合：网络原理学习</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-database"></i>
+                            Designing Data-Intensive Applications
+                        </div>
+                        <div class="card-description">
+                            现代数据系统设计的必读书籍。深入讲解分布式数据库、缓存、消息队列、流处理等技术，分析各种架构的权衡取舍。适合后端工程师和架构师。
+                        </div>
+                        <a href="https://dataintensive.net/" target="_blank" class="card-link">官方网站</a>
+                        <div class="badge-container">
+                            <span class="badge">分布式系统</span>
+                            <span class="badge">架构设计</span>
+                            <span class="badge">工程实践</span>
+                        </div>
+                        <div class="card-tag">🏗️ 适合：系统架构设计</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-code"></i>
+                            Clean Code
+                        </div>
+                        <div class="card-description">
+                            <strong>Clean Code: A Handbook of Agile Software Craftsmanship</strong> - Robert C. Martin的代码质量经典。教授如何编写可读、可维护的代码，涵盖命名、函数、注释、格式等最佳实践。
+                        </div>
+                        <a href="https://www.oreilly.com/library/view/clean-code-a/9780136083238/" target="_blank" class="card-link">O'Reilly</a>
+                        <div class="badge-container">
+                            <span class="badge">代码质量</span>
+                            <span class="badge">最佳实践</span>
+                            <span class="badge">专业素养</span>
+                        </div>
+                        <div class="card-tag">✨ 适合：提升代码质量</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            Design Patterns
+                        </div>
+                        <div class="card-description">
+                            <strong>Design Patterns: Elements of Reusable Object-Oriented Software</strong> - GoF四人帮的设计模式经典。介绍23种常用设计模式，是面向对象编程和软件架构的必读之作。
+                        </div>
+                        <a href="https://www.oreilly.com/library/view/design-patterns-elements/0201633612/" target="_blank" class="card-link">O'Reilly</a>
+                        <div class="badge-container">
+                            <span class="badge">设计模式</span>
+                            <span class="badge">OOP</span>
+                            <span class="badge">架构思维</span>
+                        </div>
+                        <div class="card-tag">🎨 适合：架构设计学习</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <p><i class="fas fa-heart"></i> 持续学习，保持好奇 <i class="fas fa-heart"></i></p>
+            <p style="margin-top: 10px; opacity: 0.8;">这些资源将助你在计算机科学的道路上走得更远</p>
+        </footer>
+    </div>
+</body>
+</html>
