@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3自学资源完整清单 - 2025最新版</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        h1 {
+            font-size: 2em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Learning Path */
+        .learning-path {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .learning-path h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+        
+        .path-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            position: relative;
+        }
+        
+        .path-step {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .path-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .path-step .number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .path-step h3 {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .path-step ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .path-step ul li {
+            padding: 5px 0;
+            color: #666;
+        }
+        
+        .path-step ul li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Resource Categories */
+        .resources-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        
+        .category {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+        
+        .category-header i {
+            font-size: 2em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .category-header h3 {
+            font-size: 1.8em;
+            color: #333;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .resource-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .resource-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .resource-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .resource-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        
+        .badge.free {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge.paid {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .badge.beginner {
+            background: #cfe2ff;
+            color: #084298;
+        }
+        
+        .badge.intermediate {
+            background: #e7d6ff;
+            color: #6f42c1;
+        }
+        
+        .badge.advanced {
+            background: #ffd6d6;
+            color: #c92a2a;
+        }
+        
+        .resource-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .resource-link:hover {
+            color: #764ba2;
+            gap: 12px;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #764ba2;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .hero h2 {
+                font-size: 1.8em;
+            }
+            
+            .hero p {
+                font-size: 1em;
+            }
+            
+            .header-content {
+                flex-direction: column;
+            }
+            
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .path-timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .category {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid white;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+            backdrop-filter: blur(10px);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%);
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .container {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        body.dark-mode header {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        body.dark-mode h1 {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.dark-mode .hero {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .learning-path {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        body.dark-mode .learning-path h2 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .path-step {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3a2a2a 100%);
+            border: 1px solid #444;
+        }
+
+        body.dark-mode .path-step .number {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+        }
+
+        body.dark-mode .path-step h3 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .path-step ul li {
+            color: #ccc;
+        }
+
+        body.dark-mode .section-title {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        body.dark-mode .section-title h2 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .category {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        body.dark-mode .category-header h3 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .category-header i {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.dark-mode .resource-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3a2a2a 100%);
+            border: 2px solid #444;
+        }
+
+        body.dark-mode .resource-card:hover {
+            border-color: #ff4444;
+            box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
+        }
+
+        body.dark-mode .resource-card::before {
+            background: linear-gradient(90deg, #ff4444 0%, #cc0000 100%);
+        }
+
+        body.dark-mode .resource-title {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .resource-description {
+            color: #ccc;
+        }
+
+        body.dark-mode .resource-link {
+            color: #ff4444;
+        }
+
+        body.dark-mode .resource-link:hover {
+            color: #ff6666;
+        }
+
+        body.dark-mode footer {
+            background: rgba(0, 0, 0, 0.95);
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .footer-links a {
+            color: #ff4444;
+        }
+
+        body.dark-mode .footer-links a:hover {
+            color: #ff6666;
+        }
+
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>
+                <i class="fas fa-cube"></i>
+                Web3自学资源清单
+            </h1>
+        </div>
+    </header>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="切换黑暗模式">
+        <i class="fas fa-moon" id="darkModeIcon"></i>
+    </button>
+
+    <div class="hero">
+        <h2>🚀 开启你的Web3学习之旅</h2>
+        <p>精选全球最优质的Web3学习资源，从区块链基础到DApp开发，助你成为Web3开发者</p>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterResources('all')">全部资源</button>
+            <button class="filter-btn" onclick="filterResources('free')">免费资源</button>
+            <button class="filter-btn" onclick="filterResources('beginner')">入门级</button>
+            <button class="filter-btn" onclick="filterResources('intermediate')">进阶级</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Learning Path -->
+        <div class="learning-path">
+            <h2>📚 学习路径指引</h2>
+            <div class="path-timeline">
+                <div class="path-step">
+                    <div class="number">1</div>
+                    <h3>基础入门</h3>
+                    <ul>
+                        <li>区块链基本原理</li>
+                        <li>加密货币基础知识</li>
+                        <li>Web3概念理解</li>
+                        <li>去中心化思维</li>
+                    </ul>
+                </div>
+                
+                <div class="path-step">
+                    <div class="number">2</div>
+                    <h3>智能合约开发</h3>
+                    <ul>
+                        <li>Solidity语言学习</li>
+                        <li>以太坊开发环境</li>
+                        <li>智能合约编写</li>
+                        <li>合约安全审计</li>
+                    </ul>
+                </div>
+                
+                <div class="path-step">
+                    <div class="number">3</div>
+                    <h3>进阶技术</h3>
+                    <ul>
+                        <li>DeFi协议开发</li>
+                        <li>NFT铸造与交易</li>
+                        <li>DAO治理机制</li>
+                        <li>跨链技术</li>
+                    </ul>
+                </div>
+                
+                <div class="path-step">
+                    <div class="number">4</div>
+                    <h3>实战项目</h3>
+                    <ul>
+                        <li>DApp全栈开发</li>
+                        <li>Web3前端集成</li>
+                        <li>链上数据分析</li>
+                        <li>项目部署上线</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="resources-section">
+            <div class="section-title">
+                <h2>🎯 精选学习资源</h2>
+            </div>
+
+            <!-- 1. 在线课程 -->
+            <div class="category" data-category="courses">
+                <div class="category-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>在线课程</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">MIT - Blockchain and Money</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            MIT斯隆商学院Gary Gensler教授主讲，深入讲解区块链技术、加密货币和金融创新，含完整视频和课件。
+                        </div>
+                        <a href="https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/" target="_blank" class="resource-link">
+                            访问课程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Berkeley - Blockchain Fundamentals</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            UC Berkeley区块链基础课程，涵盖比特币、以太坊、共识机制等核心知识，适合零基础学习者。
+                        </div>
+                        <a href="https://blockchain.berkeley.edu/courses/" target="_blank" class="resource-link">
+                            访问课程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Cyfrin Updraft</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Patrick Collins主讲的完整Solidity和智能合约开发课程，包含32小时视频教程，从基础到高级DeFi开发。
+                        </div>
+                        <a href="https://updraft.cyfrin.io/" target="_blank" class="resource-link">
+                            访问课程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="paid intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Coursera - Blockchain Specialization</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge paid">付费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            布法罗大学提供的区块链专业课程，包含4门课程和实践项目，获得专业证书。
+                        </div>
+                        <a href="https://www.coursera.org/specializations/blockchain" target="_blank" class="resource-link">
+                            访问课程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">LearnWeb3 DAO</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            完全免费的Web3开发者学习平台，提供从新手到专家的完整学习路径，包含实战项目和社区支持。
+                        </div>
+                        <a href="https://learnweb3.io/" target="_blank" class="resource-link">
+                            访问课程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Alchemy University</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Alchemy提供的免费Web3开发课程，包含JavaScript基础、智能合约、DApp开发等完整路径。
+                        </div>
+                        <a href="https://university.alchemy.com/" target="_blank" class="resource-link">
+                            访问课程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 权威教材和电子书 -->
+            <div class="category" data-category="books">
+                <div class="category-header">
+                    <i class="fas fa-book"></i>
+                    <h3>权威教材和电子书</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Mastering Bitcoin</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            Andreas Antonopoulos著，比特币技术圣经，深入讲解比特币工作原理，GitHub开源免费阅读。
+                        </div>
+                        <a href="https://github.com/bitcoinbook/bitcoinbook" target="_blank" class="resource-link">
+                            在线阅读 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Mastering Ethereum</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            以太坊权威指南，涵盖智能合约、DApp开发、Solidity编程等核心内容，开源免费。
+                        </div>
+                        <a href="https://github.com/ethereumbook/ethereumbook" target="_blank" class="resource-link">
+                            在线阅读 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Blockchain Basics (中文版)</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            区块链技术指南，适合中文读者的入门教材，系统讲解区块链基础概念和技术原理。
+                        </div>
+                        <a href="https://yeasy.gitbook.io/blockchain_guide/" target="_blank" class="resource-link">
+                            在线阅读 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="paid advanced">
+                        <div class="resource-header">
+                            <div class="resource-title">Programming Bitcoin</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge paid">付费</span>
+                            <span class="badge advanced">高级</span>
+                        </div>
+                        <div class="resource-description">
+                            Jimmy Song著，通过Python编程深入理解比特币协议，适合技术开发者。
+                        </div>
+                        <a href="https://programmingbitcoin.com/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">The DeFi Book</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            去中心化金融完整指南，涵盖DeFi协议、流动性挖矿、借贷等核心概念。
+                        </div>
+                        <a href="https://github.com/OffcierCia/DeFi-Developer-Road-Map" target="_blank" class="resource-link">
+                            在线阅读 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Solidity Documentation</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Solidity官方文档中文版，智能合约开发必备参考资料，持续更新。
+                        </div>
+                        <a href="https://docs.soliditylang.org/zh/latest/" target="_blank" class="resource-link">
+                            查看文档 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. 互动学习平台 -->
+            <div class="category" data-category="platforms">
+                <div class="category-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>互动学习平台</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">CryptoZombies</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            通过构建僵尸游戏学习Solidity，最受欢迎的智能合约互动教程，寓教于乐。
+                        </div>
+                        <a href="https://cryptozombies.io/" target="_blank" class="resource-link">
+                            开始学习 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Buildspace</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            边学边做的Web3项目平台，提供NFT、DApp、DAO等实战项目，社区活跃。
+                        </div>
+                        <a href="https://buildspace.so/" target="_blank" class="resource-link">
+                            开始构建 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Ethernaut</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            OpenZeppelin推出的智能合约安全挑战游戏，通过解谜学习合约安全漏洞和防护。
+                        </div>
+                        <a href="https://ethernaut.openzeppelin.com/" target="_blank" class="resource-link">
+                            开始挑战 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Damn Vulnerable DeFi</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            DeFi安全攻防战，通过15个真实漏洞场景学习DeFi协议安全，提升安全意识。
+                        </div>
+                        <a href="https://www.damnvulnerabledefi.xyz/" target="_blank" class="resource-link">
+                            开始挑战 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Questbook</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            Web3学习任务平台，完成任务获得NFT证书，涵盖Solidity、DeFi、NFT等多个方向。
+                        </div>
+                        <a href="https://questbook.app/" target="_blank" class="resource-link">
+                            开始任务 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Speedrun Ethereum</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Scaffold-ETH挑战赛，通过构建实际DApp项目快速掌握以太坊全栈开发。
+                        </div>
+                        <a href="https://speedrunethereum.com/" target="_blank" class="resource-link">
+                            开始挑战 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. 官方文档和指南 -->
+            <div class="category" data-category="documentation">
+                <div class="category-header">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>官方文档和指南</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Ethereum.org</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            以太坊官方文档，包含完整的开发指南、学习资源和社区链接，支持多语言。
+                        </div>
+                        <a href="https://ethereum.org/zh/" target="_blank" class="resource-link">
+                            查看文档 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Solidity by Example</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Solidity代码示例集合，通过实际代码学习智能合约开发的各种模式和最佳实践。
+                        </div>
+                        <a href="https://solidity-by-example.org/" target="_blank" class="resource-link">
+                            查看示例 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Web3.js Documentation</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Web3.js官方文档，以太坊JavaScript API库，Web3前端开发必备工具。
+                        </div>
+                        <a href="https://web3js.readthedocs.io/" target="_blank" class="resource-link">
+                            查看文档 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Ethers.js Documentation</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Ethers.js官方文档，轻量级以太坊库，API设计优雅，越来越多项目采用。
+                        </div>
+                        <a href="https://docs.ethers.org/" target="_blank" class="resource-link">
+                            查看文档 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free advanced">
+                        <div class="resource-header">
+                            <div class="resource-title">OpenZeppelin Contracts</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge advanced">高级</span>
+                        </div>
+                        <div class="resource-description">
+                            OpenZeppelin智能合约库文档，业界标准的安全合约模板，ERC标准实现。
+                        </div>
+                        <a href="https://docs.openzeppelin.com/contracts/" target="_blank" class="resource-link">
+                            查看文档 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Hardhat Documentation</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Hardhat开发框架文档，最流行的以太坊开发环境，支持测试、部署、调试。
+                        </div>
+                        <a href="https://hardhat.org/docs" target="_blank" class="resource-link">
+                            查看文档 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. 实战项目和教程 -->
+            <div class="category" data-category="projects">
+                <div class="category-header">
+                    <i class="fas fa-rocket"></i>
+                    <h3>实战项目和教程</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Full Stack Web3 Tutorial</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Nader Dabit的Web3全栈教程，使用React、Next.js、Hardhat构建完整DApp。
+                        </div>
+                        <a href="https://github.com/dabit3/full-stack-ethereum" target="_blank" class="resource-link">
+                            查看项目 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Build Your First NFT</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            从零开始创建NFT项目，包含智能合约编写、元数据存储、前端铸造界面。
+                        </div>
+                        <a href="https://github.com/scaffold-eth/scaffold-eth-2" target="_blank" class="resource-link">
+                            查看教程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free advanced">
+                        <div class="resource-header">
+                            <div class="resource-title">DeFi Yield Farming</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge advanced">高级</span>
+                        </div>
+                        <div class="resource-description">
+                            构建DeFi收益农场项目，学习流动性挖矿、质押、奖励分配等核心机制。
+                        </div>
+                        <a href="https://github.com/PatrickAlphaC/defi-stake-yield-brownie" target="_blank" class="resource-link">
+                            查看项目 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">DEX (Uniswap Clone)</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            从零实现去中心化交易所，理解AMM机制、流动性池、交易路由等概念。
+                        </div>
+                        <a href="https://github.com/Uniswap/v2-core" target="_blank" class="resource-link">
+                            查看项目 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">DAO Governance Tutorial</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            构建DAO治理系统，实现提案创建、投票、执行等完整治理流程。
+                        </div>
+                        <a href="https://github.com/PatrickAlphaC/dao-template" target="_blank" class="resource-link">
+                            查看教程 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free advanced">
+                        <div class="resource-header">
+                            <div class="resource-title">Cross-Chain Bridge</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge advanced">高级</span>
+                        </div>
+                        <div class="resource-description">
+                            跨链桥接项目，学习多链资产转移、消息传递、安全验证等高级技术。
+                        </div>
+                        <a href="https://github.com/connext/monorepo" target="_blank" class="resource-link">
+                            查看项目 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. 开发工具和框架 -->
+            <div class="category" data-category="tools">
+                <div class="category-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>开发工具和框架</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Hardhat</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            专业的以太坊开发环境，支持Solidity编译、本地测试网、部署脚本、插件生态。
+                        </div>
+                        <a href="https://hardhat.org/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Foundry</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            Rust编写的快速以太坊开发工具链，包含Forge测试、Cast交互、Anvil本地节点。
+                        </div>
+                        <a href="https://book.getfoundry.sh/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Remix IDE</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            基于浏览器的Solidity IDE，无需安装即可编写、编译、部署智能合约。
+                        </div>
+                        <a href="https://remix.ethereum.org/" target="_blank" class="resource-link">
+                            打开IDE <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Metamask</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            最流行的Web3钱包插件，支持以太坊和EVM链，DApp开发必备工具。
+                        </div>
+                        <a href="https://metamask.io/" target="_blank" class="resource-link">
+                            下载安装 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">Alchemy</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            区块链开发平台，提供RPC节点、NFT API、增强API、监控工具等服务。
+                        </div>
+                        <a href="https://www.alchemy.com/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">The Graph</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            去中心化索引协议，通过GraphQL查询区块链数据，构建高效DApp后端。
+                        </div>
+                        <a href="https://thegraph.com/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">IPFS</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            去中心化存储网络，用于存储NFT元数据、DApp前端等静态内容。
+                        </div>
+                        <a href="https://ipfs.tech/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free advanced">
+                        <div class="resource-header">
+                            <div class="resource-title">Tenderly</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge advanced">高级</span>
+                        </div>
+                        <div class="resource-description">
+                            智能合约监控和调试平台，提供交易模拟、Gas分析、告警监控等功能。
+                        </div>
+                        <a href="https://tenderly.co/" target="_blank" class="resource-link">
+                            了解更多 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. 社区和论坛 -->
+            <div class="category" data-category="community">
+                <div class="category-header">
+                    <i class="fas fa-users"></i>
+                    <h3>社区和论坛</h3>
+                </div>
+                <div class="resource-grid">
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Ethereum Stack Exchange</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            以太坊技术问答社区，高质量的问题和解答，搜索引擎友好，适合查找问题解决方案。
+                        </div>
+                        <a href="https://ethereum.stackexchange.com/" target="_blank" class="resource-link">
+                            访问社区 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Reddit r/ethdev</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            以太坊开发者Reddit社区，讨论技术问题、分享项目、获取行业资讯。
+                        </div>
+                        <a href="https://www.reddit.com/r/ethdev/" target="_blank" class="resource-link">
+                            访问社区 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Discord - Ethereum R&D</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            以太坊官方Discord服务器，实时交流技术问题，参与核心开发讨论。
+                        </div>
+                        <a href="https://discord.gg/ethereum-org" target="_blank" class="resource-link">
+                            加入Discord <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Dev.to Web3 Community</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            开发者博客平台的Web3社区，分享教程、经验文章、项目案例。
+                        </div>
+                        <a href="https://dev.to/t/web3" target="_blank" class="resource-link">
+                            访问社区 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free intermediate">
+                        <div class="resource-header">
+                            <div class="resource-title">GitHub Web3 Topics</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge intermediate">进阶</span>
+                        </div>
+                        <div class="resource-description">
+                            GitHub上的Web3主题仓库集合，发现优秀开源项目，学习他人代码。
+                        </div>
+                        <a href="https://github.com/topics/web3" target="_blank" class="resource-link">
+                            浏览项目 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">Twitter Web3 Community</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            关注Web3开发者、项目方、意见领袖，获取最新行业动态和技术趋势。
+                        </div>
+                        <a href="https://twitter.com/search?q=%23web3dev" target="_blank" class="resource-link">
+                            关注话题 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">登链社区 (中文)</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            中文区块链技术社区，提供教程、翻译文档、技术问答，适合中文开发者。
+                        </div>
+                        <a href="https://learnblockchain.cn/" target="_blank" class="resource-link">
+                            访问社区 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card" data-tags="free beginner">
+                        <div class="resource-header">
+                            <div class="resource-title">WTF Academy (中文)</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge free">免费</span>
+                            <span class="badge beginner">入门</span>
+                        </div>
+                        <div class="resource-description">
+                            WTF学院，提供高质量的中文Web3教程，涵盖Solidity、Ethers.js等内容。
+                        </div>
+                        <a href="https://www.wtf.academy/" target="_blank" class="resource-link">
+                            访问学院 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>🌟 持续学习，拥抱Web3未来</h3>
+            <p style="margin: 20px 0; color: #666;">
+                本清单由AI整理生成，资源持续更新中。建议收藏此页面，定期查看最新内容。
+            </p>
+            <div class="footer-links">
+                <a href="https://ethereum.org/zh/" target="_blank">
+                    <i class="fas fa-link"></i> Ethereum.org
+                </a>
+                <a href="https://github.com/topics/web3" target="_blank">
+                    <i class="fab fa-github"></i> GitHub Web3
+                </a>
+                <a href="https://learnblockchain.cn/" target="_blank">
+                    <i class="fas fa-book"></i> 登链社区
+                </a>
+            </div>
+            <p style="margin-top: 30px; color: #999; font-size: 0.9em;">
+                © 2025 Web3自学资源清单 | 由 Josephine 创建 | 最后更新: 2025年10月
+            </p>
+        </div>
+    </footer>
+
+    <script>
+
+        // 筛选功能
+        function filterResources(filter) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // 找到被点击的按钮并添加active类
+            buttons.forEach(btn => {
+                if (btn.textContent.includes(getFilterText(filter))) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            const resourceCards = document.querySelectorAll('.resource-card');
+            
+            resourceCards.forEach(card => {
+                const tags = card.getAttribute('data-tags');
+                
+                if (filter === 'all' || tags.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 辅助函数：根据筛选类型返回对应的中文文本
+        function getFilterText(filter) {
+            const filterMap = {
+                'all': '全部资源',
+                'free': '免费资源',
+                'beginner': '入门级',
+                'intermediate': '进阶级'
+            };
+            return filterMap[filter] || '';
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 动态加载动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.category').forEach(category => {
+            category.style.opacity = '0';
+            category.style.transform = 'translateY(30px)';
+            category.style.transition = 'all 0.6s ease-out';
+            observer.observe(category);
+        });
+
+        // 黑暗模式切换功能
+        function toggleDarkMode() {
+            const body = document.body;
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                darkModeIcon.className = 'fas fa-sun';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeIcon.className = 'fas fa-moon';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // 页面加载时检查黑暗模式设置
+        window.addEventListener('load', function() {
+            const darkMode = localStorage.getItem('darkMode');
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            
+            if (darkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+                darkModeIcon.className = 'fas fa-sun';
+            }
+
+            // 统计信息
+            const totalResources = document.querySelectorAll('.resource-card').length;
+            const freeResources = document.querySelectorAll('.badge.free').length;
+            console.log(`📊 资源统计: 共${totalResources}个资源，其中${freeResources}个免费资源`);
+        });
+    </script>
+</body>
+</html>
