@@ -924,8 +924,22 @@
             box-shadow: 0 10px 30px rgba(0,0,0,.35) !important;
         }
         
-        body.dark-mode .tool-item span {
-            color: #e5e7eb !important;
+        /* Sponsor name styling */
+        .sponsor-name {
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.05em;
+        }
+        
+        /* Dark mode sponsor name */
+        body.dark-mode .sponsor-name {
+            background: linear-gradient(135deg, #93c5fd 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         body.dark-mode .tool-item:hover {
@@ -2209,7 +2223,7 @@
                 </a>
             </div>
             <p style="margin-top: 30px; color: #999; font-size: 0.9em;">
-                © 2025 Web3自学资源清单 | 由 Josephine 创建 | 最后更新: 2025年10月
+                © 2025 Web3自学资源清单 | Sponsored by <span class="sponsor-name">Josephine</span> | 最后更新: 2025年10月
             </p>
         </div>
     </footer>
