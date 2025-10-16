@@ -15,9 +15,14 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e5e7eb;
+            /* 动态角度由 JS 更新 */
+            --bgAngle: 135deg;
+            --bg1: #111827; /* slate-900 */
+            --bg2: #1f2937; /* slate-800 */
+            background: linear-gradient(var(--bgAngle), var(--bg1) 0%, var(--bg2) 100%);
             min-height: 100vh;
+            transition: background 200ms linear;
         }
         
         .container {
@@ -28,7 +33,7 @@
         
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(10px);
             padding: 20px 0;
             position: sticky;
@@ -63,7 +68,7 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
-            color: white;
+            color: #e5e7eb;
         }
         
         .hero h2 {
@@ -81,18 +86,19 @@
         
         /* Learning Path */
         .learning-path {
-            background: white;
+            background: rgba(17, 24, 39, 0.55);
             border-radius: 20px;
             padding: 40px;
             margin: 40px 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255,255,255,.06);
         }
         
         .learning-path h2 {
             text-align: center;
             margin-bottom: 40px;
             font-size: 2em;
-            color: #333;
+            color: #e5e7eb;
         }
         
         .path-timeline {
@@ -103,11 +109,13 @@
         }
         
         .path-step {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%) !important;
             padding: 30px;
             border-radius: 15px;
             position: relative;
             transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,.06) !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35) !important;
         }
         
         .path-step:hover {
@@ -134,7 +142,7 @@
         .path-step h3 {
             margin-top: 10px;
             margin-bottom: 15px;
-            color: #333;
+            color: #e5e7eb !important;
         }
         
         .path-step ul {
@@ -144,7 +152,12 @@
         
         .path-step ul li {
             padding: 5px 0;
-            color: #666;
+            color: #cbd5e1 !important;
+        }
+
+        /* 强制学习路径卡片中的任意文本为高对比浅色，避免外部样式覆盖 */
+        .learning-path .path-step, .learning-path .path-step * {
+            color: inherit;
         }
         
         .path-step ul li:before {
@@ -160,25 +173,27 @@
         }
         
         .section-title {
-            background: white;
+            background: rgba(17, 24, 39, 0.55);
             padding: 20px;
             border-radius: 15px;
             margin-bottom: 30px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255,255,255,.06);
         }
         
         .section-title h2 {
             font-size: 2em;
-            color: #333;
+            color: #e5e7eb;
         }
         
         .category {
-            background: white;
+            background: rgba(17, 24, 39, 0.55);
             border-radius: 20px;
             padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255,255,255,.06);
         }
         
         .category-header {
@@ -209,10 +224,10 @@
         }
         
         .resource-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, rgba(31,41,55,.85) 0%, rgba(17,24,39,.85) 100%);
             border-radius: 15px;
             padding: 25px;
-            border: 2px solid #e0e0e0;
+            border: 1px solid rgba(255,255,255,.06);
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -233,6 +248,11 @@
             height: 4px;
             background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
         }
+
+        /* 学习建议左侧标签颜色（替换灰色为主题强调色） */
+        .guide-section ul li strong {
+            color: #a5b4fc; /* indigo-300 */
+        }
         
         .resource-header {
             display: flex;
@@ -244,7 +264,7 @@
         .resource-title {
             font-size: 1.2em;
             font-weight: bold;
-            color: #333;
+            color: #e5e7eb;
             flex: 1;
         }
         
@@ -263,28 +283,28 @@
         }
         
         .badge.free {
-            background: #d4edda;
-            color: #155724;
+            background: rgba(16,185,129,.15);
+            color: #34d399;
         }
         
         .badge.paid {
-            background: #fff3cd;
-            color: #856404;
+            background: rgba(245,158,11,.15);
+            color: #f59e0b;
         }
         
         .badge.beginner {
-            background: #cfe2ff;
-            color: #084298;
+            background: rgba(59,130,246,.15);
+            color: #60a5fa;
         }
         
         .badge.intermediate {
-            background: #e7d6ff;
-            color: #6f42c1;
+            background: rgba(168,85,247,.15);
+            color: #a78bfa;
         }
         
         .badge.advanced {
-            background: #ffd6d6;
-            color: #c92a2a;
+            background: rgba(239,68,68,.15);
+            color: #f87171;
         }
         
         .resource-description {
@@ -311,7 +331,8 @@
         
         /* Footer */
         footer {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(17, 24, 39, 0.7);
+            color: #e5e7eb;
             padding: 40px 20px;
             margin-top: 60px;
             text-align: center;
@@ -463,8 +484,9 @@
         }
 
         body.dark-mode .section-title {
-            background: #1a1a1a;
-            border: 1px solid #333;
+            background: rgba(17, 24, 39, 0.88);
+            border: 1px solid rgba(255,255,255,.08);
+            box-shadow: 0 8px 26px rgba(0,0,0,.35);
         }
 
         body.dark-mode .section-title h2 {
@@ -520,6 +542,7 @@
             background: rgba(0, 0, 0, 0.95);
             color: #e0e0e0;
         }
+        body.dark-mode .footer-content { background: transparent; }
 
         body.dark-mode .footer-links a {
             color: #ff4444;
@@ -564,12 +587,12 @@
 
         /* Learning Guide Styles */
         .learning-guide, .creation-info {
-            background: white;
+            background: rgba(17, 24, 39, 0.55);
             border-radius: 25px;
             padding: 50px;
             margin: 50px 0;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(102, 126, 234, 0.1);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .guide-content, .info-content {
@@ -580,7 +603,7 @@
         .guide-section, .info-section {
             margin-bottom: 50px;
             padding: 30px;
-            background: linear-gradient(135deg, #fafbff 0%, #f0f2ff 100%);
+            background: linear-gradient(135deg, rgba(31,41,55,.85) 0%, rgba(17,24,39,.85) 100%);
             border-radius: 20px;
             border-left: 5px solid #667eea;
             transition: all 0.3s ease;
@@ -592,7 +615,7 @@
         }
 
         .guide-section h3, .info-section h3 {
-            color: #2d3748;
+            color: #e5e7eb;
             margin-bottom: 25px;
             display: flex;
             align-items: center;
@@ -630,11 +653,11 @@
         .guide-section ul li {
             padding: 15px 20px;
             margin-bottom: 12px;
-            color: #4a5568;
-            background: white;
+            color: #cbd5e1;
+            background: rgba(17,24,39,.75);
             border-radius: 12px;
             border-left: 4px solid #667eea;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
             transition: all 0.3s ease;
             position: relative;
         }
@@ -654,7 +677,7 @@
         }
 
         .info-section p {
-            color: #4a5568;
+            color: #d1d5db;
             line-height: 1.8;
             font-size: 1.05em;
             margin-top: 15px;
@@ -672,12 +695,13 @@
             align-items: flex-start;
             gap: 20px;
             padding: 25px;
-            background: white;
+            background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%);
             border-radius: 20px;
-            border: 2px solid #e2e8f0;
+            border: 1px solid rgba(255,255,255,.06);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35);
         }
 
         .step::before {
@@ -712,14 +736,14 @@
         }
 
         .step-content h4 {
-            color: #2d3748;
+            color: #ffffff;
             margin-bottom: 10px;
             font-size: 1.2em;
             font-weight: 600;
         }
 
         .step-content p {
-            color: #4a5568;
+            color: #ffffff;
             font-size: 1em;
             line-height: 1.6;
         }
@@ -736,29 +760,29 @@
             align-items: center;
             gap: 15px;
             padding: 20px;
-            background: white;
+            background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%);
             border-radius: 15px;
-            border: 2px solid #e2e8f0;
+            border: 1px solid rgba(255,255,255,.06);
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
         }
 
         .tool-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-            border-color: #667eea;
+            box-shadow: 0 12px 30px rgba(0,0,0,.35);
+            border-color: rgba(147,197,253,.5);
         }
 
         .tool-item i {
-            color: #667eea;
+            color: #93c5fd;
             font-size: 1.4em;
             padding: 8px;
-            background: rgba(102, 126, 234, 0.1);
+            background: rgba(147, 197, 253, 0.15);
             border-radius: 50%;
         }
 
         .tool-item span {
-            color: #4a5568;
+            color: #d1d5db;
             font-weight: 500;
         }
 
@@ -893,36 +917,15 @@
             color: #ccc;
         }
 
-        body.dark-mode .step {
-            background: #2a2a2a;
-            border-color: #444;
-        }
-
-        body.dark-mode .step::before {
-            background: linear-gradient(90deg, #ff4444 0%, #cc0000 100%);
-        }
-
-        body.dark-mode .step:hover {
-            border-color: #ff4444;
-            box-shadow: 0 15px 40px rgba(255, 68, 68, 0.2);
-        }
-
-        body.dark-mode .step-number {
-            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
-            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
-        }
-
-        body.dark-mode .step-content h4 {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .step-content p {
-            color: #ccc;
-        }
 
         body.dark-mode .tool-item {
-            background: #2a2a2a;
-            border-color: #444;
+            background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%) !important;
+            border: 1px solid rgba(255,255,255,.06) !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35) !important;
+        }
+        
+        body.dark-mode .tool-item span {
+            color: #e5e7eb !important;
         }
 
         body.dark-mode .tool-item:hover {
@@ -998,6 +1001,63 @@
             color: #ff6b6b !important;
         }
 
+        /* Global dark-mode strong overrides to消除残留白底并提升对比度 */
+        body.dark-mode .section-title,
+        body.dark-mode .guide-section,
+        body.dark-mode .info-section,
+        body.dark-mode .resource-card,
+        body.dark-mode .tool-item,
+        body.dark-mode .feature-item,
+        body.dark-mode .learning-path,
+        body.dark-mode .category {
+            background: rgba(17, 24, 39, 0.88) !important; /* slate-900 */
+            border: 1px solid rgba(255,255,255,.08) !important;
+            color: #e5e7eb !important;
+        }
+        body.dark-mode .path-timeline { background: transparent !important; }
+        body.dark-mode .path-step,
+        body.dark-mode .step {
+            background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%) !important;
+            border: 1px solid rgba(255,255,255,.06) !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35) !important;
+        }
+        
+        body.dark-mode .step-content h4 {
+            color: #e5e7eb !important;
+        }
+        
+        body.dark-mode .step-content p {
+            color: #cbd5e1 !important;
+        }
+        
+        body.dark-mode .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+        }
+        body.dark-mode .resource-description,
+        body.dark-mode .info-section p,
+        body.dark-mode .guide-section ul li,
+        body.dark-mode .tool-item span,
+        body.dark-mode .feature-item p {
+            color: #d1d5db !important; /* slate-300 */
+        }
+
+        /* 深色模式下学习建议标签用更亮的强调色 */
+        body.dark-mode .guide-section ul li strong { color: #93c5fd !important; }
+        body.dark-mode a,
+        body.dark-mode .resource-link { color: #93c5fd; }
+        body.dark-mode a:hover,
+        body.dark-mode .resource-link:hover { color: #bfdbfe; }
+        
+        /* Badges high-contrast in dark */
+        body.dark-mode .badge{ border:1px solid rgba(255,255,255,.08); }
+        body.dark-mode .badge.free{ background: rgba(16,185,129,.25); color:#34d399; }
+        body.dark-mode .badge.paid{ background: rgba(245,158,11,.25); color:#fbbf24; }
+        body.dark-mode .badge.beginner{ background: rgba(59,130,246,.25); color:#93c5fd; }
+        body.dark-mode .badge.intermediate{ background: rgba(168,85,247,.25); color:#c4b5fd; }
+        body.dark-mode .badge.advanced{ background: rgba(239,68,68,.25); color:#fca5a5; }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .learning-guide, .creation-info {
@@ -1018,6 +1078,95 @@
                 align-items: center;
             }
         }
+        
+        /* ==========================================
+           Multi-Theme System (Light mode accents)
+           ========================================== */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 80px;
+            z-index: 1001;
+            background: #111;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,.2);
+            transition: transform .2s ease;
+        }
+        .theme-toggle:hover{ transform: scale(1.08); }
+
+        .theme-panel {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(255,255,255,.95);
+            border-radius: 16px;
+            padding: 14px;
+            box-shadow: 0 14px 40px rgba(0,0,0,.15);
+            display: none;
+            gap: 10px;
+        }
+        .theme-chip {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 2px solid rgba(0,0,0,.05);
+            cursor: pointer;
+        }
+        .theme-chip[data-theme="mondrian"]{ background: linear-gradient(135deg,#e52e2e,#2563eb 70%); }
+        .theme-chip[data-theme="memphis"]{ background: linear-gradient(135deg,#06b6d4,#f472b6); }
+        .theme-chip[data-theme="neumorph"]{ background: linear-gradient(135deg,#f3f4f6,#e5e7eb); }
+        .theme-chip[data-theme="brutalist"]{ background: linear-gradient(135deg,#ffcf33,#111827); }
+        .theme-chip[data-theme="minimal"]{ background: linear-gradient(135deg,#ffffff,#f3f4f6); }
+
+        /* Theme overrides (affect key accents) */
+        /* Mondrian – 强烈原色（暗色基底） */
+        body.theme-mondrian{ --bg1:#0b1022; --bg2:#111827; }
+        body.theme-mondrian h1{ background: linear-gradient(135deg,#2563eb,#e11d48); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        body.theme-mondrian .resource-card::before{ background: linear-gradient(90deg,#2563eb,#e11d48); }
+        body.theme-mondrian .resource-card:hover{ border-color:#2563eb; }
+        body.theme-mondrian .resource-link{ color:#2563eb; }
+        body.theme-mondrian .filter-btn.active{ color:#2563eb; }
+
+        /* Memphis – 俏皮粉蓝绿（暗色基底） */
+        body.theme-memphis{ --bg1:#0d1b1e; --bg2:#1f2937; }
+        body.theme-memphis h1{ background: linear-gradient(135deg,#22d3ee,#f472b6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        body.theme-memphis .resource-card::before{ background: linear-gradient(90deg,#22d3ee,#f472b6); }
+        body.theme-memphis .resource-card:hover{ border-color:#22d3ee; }
+        body.theme-memphis .resource-link{ color:#22d3ee; }
+        body.theme-memphis .filter-btn.active{ color:#22d3ee; }
+
+        /* Neumorphism – 暗色柔和 */
+        body.theme-neumorph{ --bg1:#0b0f19; --bg2:#111827; }
+        body.theme-neumorph header, body.theme-neumorph .category, body.theme-neumorph .learning-path{ box-shadow: 8px 8px 20px rgba(0,0,0,.35), -8px -8px 20px rgba(255,255,255,.04); }
+        body.theme-neumorph h1{ background: linear-gradient(135deg,#111827,#6b7280); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        body.theme-neumorph .resource-card::before{ background: linear-gradient(90deg,#6b7280,#111827); }
+        body.theme-neumorph .resource-card:hover{ border-color:#6b7280; }
+        body.theme-neumorph .resource-link{ color:#374151; }
+        body.theme-neumorph .filter-btn.active{ color:#374151; }
+
+        /* Brutalist – 强对比黄黑（暗色基底） */
+        body.theme-brutalist{ --bg1:#0b0b0b; --bg2:#111827; }
+        body.theme-brutalist h1{ background: linear-gradient(135deg,#111827,#f59e0b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        body.theme-brutalist .resource-card::before{ background: linear-gradient(90deg,#111827,#f59e0b); }
+        body.theme-brutalist .resource-card:hover{ border-color:#111827; }
+        body.theme-brutalist .resource-link{ color:#111827; }
+        body.theme-brutalist .filter-btn.active{ color:#111827; }
+
+        /* Minimal – 暗色极简 */
+        body.theme-minimal{ --bg1:#0b1022; --bg2:#0f172a; }
+        body.theme-minimal h1{ background: linear-gradient(135deg,#94a3b8,#ffffff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        body.theme-minimal .resource-card::before{ background: linear-gradient(90deg,#94a3b8,#e5e7eb); }
+        body.theme-minimal .resource-card:hover{ border-color:#64748b; }
+        body.theme-minimal .resource-link{ color:#93c5fd; }
+        body.theme-minimal .filter-btn.active{ color:#93c5fd; }
     </style>
 </head>
 <body>
@@ -1034,6 +1183,16 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="切换黑暗模式">
         <i class="fas fa-moon" id="darkModeIcon"></i>
     </button>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="切换主题"><i class="fas fa-palette"></i></button>
+    <div class="theme-panel" id="themePanel">
+        <div class="theme-chip" data-theme="mondrian" title="Mondrian"></div>
+        <div class="theme-chip" data-theme="memphis" title="Memphis"></div>
+        <div class="theme-chip" data-theme="neumorph" title="Neumorphism"></div>
+        <div class="theme-chip" data-theme="brutalist" title="Brutalist"></div>
+        <div class="theme-chip" data-theme="minimal" title="Minimal"></div>
+    </div>
 
     <div class="hero">
         <h2>🚀 开启你的Web3学习之旅</h2>
@@ -2160,6 +2319,69 @@
             const freeResources = document.querySelectorAll('.badge.free').length;
             console.log(`📊 资源统计: 共${totalResources}个资源，其中${freeResources}个免费资源`);
         });
+
+        // ========= Theme Switcher =========
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themePanel = document.getElementById('themePanel');
+        themeToggleBtn.addEventListener('click', () => {
+            themePanel.style.display = themePanel.style.display === 'grid' ? 'none' : 'grid';
+            themePanel.style.gridTemplateColumns = 'repeat(5, 34px)';
+        });
+
+        // 基础色相表（可根据主题改变主色）
+        const themeBase = {
+            mondrian: { h1: 225, h2: 345 },
+            memphis:  { h1: 190, h2: 320 },
+            neumorph: { h1: 220, h2: 245 },
+            brutalist:{ h1: 45,  h2: 220 },
+            minimal:  { h1: 225, h2: 235 }
+        };
+        let currentTheme = 'minimal';
+
+        const savedTheme = localStorage.getItem('siteTheme');
+        if (savedTheme) currentTheme = savedTheme;
+        applyTheme(currentTheme);
+
+        document.querySelectorAll('.theme-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const name = chip.getAttribute('data-theme');
+                applyTheme(name);
+                localStorage.setItem('siteTheme', name);
+            });
+        });
+
+        function applyTheme(name){
+            const classes = ['theme-mondrian','theme-memphis','theme-neumorph','theme-brutalist','theme-minimal'];
+            document.body.classList.remove(...classes);
+            document.body.classList.add('theme-' + name);
+            currentTheme = name;
+            updateGradientByScroll();
+        }
+
+        // 背景角度随鼠标移动渐变
+        document.addEventListener('mousemove', (e) => {
+            const angle = Math.round((e.clientX / window.innerWidth) * 360);
+            document.body.style.setProperty('--bgAngle', angle + 'deg');
+        });
+
+        // 背景颜色随页面滚动渐变
+        window.addEventListener('scroll', updateGradientByScroll);
+        window.addEventListener('resize', updateGradientByScroll);
+
+        function updateGradientByScroll(){
+            const doc = document.documentElement;
+            const maxScroll = (doc.scrollHeight - window.innerHeight) || 1;
+            const ratio = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+            const base = themeBase[currentTheme] || themeBase.minimal;
+            const hueOffset = Math.round(ratio * 180); // 0~180度的色相变化
+            const h1 = (base.h1 + hueOffset) % 360;
+            const h2 = (base.h2 + hueOffset) % 360;
+            const c1 = `hsl(${h1} 70% 14%)`;
+            const c2 = `hsl(${h2} 70% 18%)`;
+            document.body.style.setProperty('--bg1', c1);
+            document.body.style.setProperty('--bg2', c2);
+        }
+        updateGradientByScroll();
     </script>
 </body>
 </html>

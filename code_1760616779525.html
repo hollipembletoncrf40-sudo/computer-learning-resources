@@ -248,6 +248,11 @@
             height: 4px;
             background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
         }
+
+        /* 学习建议左侧标签颜色（替换灰色为主题强调色） */
+        .guide-section ul li strong {
+            color: #a5b4fc; /* indigo-300 */
+        }
         
         .resource-header {
             display: flex;
@@ -690,12 +695,13 @@
             align-items: flex-start;
             gap: 20px;
             padding: 25px;
-            background: white;
+            background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%);
             border-radius: 20px;
-            border: 2px solid #e2e8f0;
+            border: 1px solid rgba(255,255,255,.06);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35);
         }
 
         .step::before {
@@ -730,14 +736,14 @@
         }
 
         .step-content h4 {
-            color: #2d3748;
+            color: #ffffff;
             margin-bottom: 10px;
             font-size: 1.2em;
             font-weight: 600;
         }
 
         .step-content p {
-            color: #4a5568;
+            color: #ffffff;
             font-size: 1em;
             line-height: 1.6;
         }
@@ -911,32 +917,6 @@
             color: #ccc;
         }
 
-        body.dark-mode .step {
-            background: #2a2a2a;
-            border-color: #444;
-        }
-
-        body.dark-mode .step::before {
-            background: linear-gradient(90deg, #ff4444 0%, #cc0000 100%);
-        }
-
-        body.dark-mode .step:hover {
-            border-color: #ff4444;
-            box-shadow: 0 15px 40px rgba(255, 68, 68, 0.2);
-        }
-
-        body.dark-mode .step-number {
-            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
-            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
-        }
-
-        body.dark-mode .step-content h4 {
-            color: #e0e0e0;
-        }
-
-        body.dark-mode .step-content p {
-            color: #ccc;
-        }
 
         body.dark-mode .tool-item {
             background: linear-gradient(135deg, rgba(31,41,55,.9) 0%, rgba(17,24,39,.9) 100%) !important;
@@ -1049,6 +1029,12 @@
         body.dark-mode .step-content p {
             color: #cbd5e1 !important;
         }
+        
+        body.dark-mode .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+        }
         body.dark-mode .resource-description,
         body.dark-mode .info-section p,
         body.dark-mode .guide-section ul li,
@@ -1056,6 +1042,9 @@
         body.dark-mode .feature-item p {
             color: #d1d5db !important; /* slate-300 */
         }
+
+        /* 深色模式下学习建议标签用更亮的强调色 */
+        body.dark-mode .guide-section ul li strong { color: #93c5fd !important; }
         body.dark-mode a,
         body.dark-mode .resource-link { color: #93c5fd; }
         body.dark-mode a:hover,
@@ -2190,7 +2179,7 @@
                     <h3><i class="fas fa-handshake"></i> 贡献与反馈</h3>
                     <p>如果你发现优质的Web3学习资源，或者对网站有任何建议，欢迎通过以下方式联系我们：</p>
                     <div class="contact-methods">
-                        <a href="https://github.com/hollipembletoncrf40-sudo/computer-learning-resources" target="_blank" class="contact-link">
+                        <a href="https://github.com/hollipembletoncrf40-sudo/web3go" target="_blank" class="contact-link">
                             <i class="fab fa-github"></i> GitHub Issues
                         </a>
                         <a href="mailto:hollipembletoncrf40@gmail.com" class="contact-link">
